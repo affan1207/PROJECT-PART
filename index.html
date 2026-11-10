@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Water Guardians — learn to protect water through stories, games, and practical tips.">
+  <title>Water Guardians</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=14">
+  <style>
+    /* Critical: keep portal readable even if cached CSS is broken */
+    #portal { display: grid !important; min-height: 100vh; color: #0f2a31; }
+    #portal[hidden] { display: none !important; }
+    #portal .portal-brand,
+    #portal .portal-copy,
+    #portal .portal-split,
+    #portal .path-card {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    #portal .brand-name,
+    #portal h1,
+    #portal .path-body strong { color: #0f2a31 !important; }
+    #app[hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <!-- Portal: first decision -->
+  <section id="portal" class="portal" aria-label="Choose your path">
+    <div class="portal-bg" aria-hidden="true">
+      <span class="ripple r1"></span>
+      <span class="ripple r2"></span>
+      <span class="ripple r3"></span>
+    </div>
+    <header class="portal-brand">
+      <div class="portal-brand-main">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 40 48" fill="none"><path d="M20 2C28 14 36 22 36 32a16 16 0 1 1-32 0C4 22 12 14 20 2Z" fill="currentColor"/><path d="M12 30c4-4 8-4 12 0" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".7"/></svg>
+        </div>
+        <div>
+          <p class="brand-name">Water Guardians</p>
+          <p class="brand-tag">Every drop counts</p>
+        </div>
+      </div>
+      <a class="why-link" href="#why">Why water matters</a>
+    </header>
+
+    <div class="portal-copy">
+      <h1>Who’s exploring today?</h1>
+      <p>Pick a path. Kids get stories, games and films. Adults get clear, practical ways to save water.</p>
+    </div>
+
+    <div class="portal-split">
+      <button type="button" class="path-card path-kids" data-enter="kids">
+        <div class="path-visual" aria-hidden="true">
+          <img class="path-illu" src="assets/kid.png" alt="" width="640" height="400" decoding="async">
+        </div>
+        <div class="path-body">
+          <span class="path-kicker">Ages 5–12</span>
+          <strong>Kids</strong>
+          <span>Storybooks, Leak Patrol, and animated films</span>
+        </div>
+        <span class="path-go" aria-hidden="true">→</span>
+      </button>
+
+      <button type="button" class="path-card path-adults" data-enter="adults">
+        <div class="path-visual" aria-hidden="true">
+          <img class="path-illu" src="assets/adult.png" alt="" width="640" height="400" decoding="async">
+        </div>
+        <div class="path-body">
+          <span class="path-kicker">Home · Work · Outdoors</span>
+          <strong>Adults</strong>
+          <span>32 practical tips you can use today</span>
+        </div>
+        <span class="path-go" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Why water matters (standalone page) -->
+  <section id="view-why" class="why-page" hidden aria-labelledby="whyTitle">
+    <div class="why-page-bar">
+      <a class="why-back" href="#home">← Back home</a>
+      <p class="brand-name">Water Guardians</p>
+    </div>
+    <div class="why-inner">
+      <header class="why-head">
+        <p class="eyebrow">The bigger picture</p>
+        <h1 id="whyTitle">Why water matters</h1>
+        <p class="why-lead">Water gives us life. We drink it, cook with it, grow food with it, and share it with animals, fish and plants. It is also far more limited than most of us think.</p>
+      </header>
+
+      <div class="drops">
+        <svg class="dg" id="dropGrid" viewBox="0 0 250 310" role="img" aria-label="100 drops. 97 are salty ocean water, 2 are frozen in ice, and 1 is fresh water that is ready to drink."></svg>
+        <div>
+          <h2>If Earth’s water were 100 drops</h2>
+          <ul class="dkey">
+            <li><i></i><span><b>97 drops</b> are salty ocean water.</span></li>
+            <li><i class="ice"></i><span><b>2 drops</b> are frozen in ice.</span></li>
+            <li><i class="fresh"></i><span><b>Less than 1 drop</b> is fresh and clean enough for us to use. This is the drop we all share.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact nv"><b>700 million+</b><span>people around the world do not have safe, clean water close to home.</span></div>
+        <div class="fact tl"><b>6 litres</b><span>of water run out of a tap every minute while you brush your teeth.</span></div>
+        <div class="fact gold"><b>11,000 L</b><span>can be lost in a year to a tap that drips once every second.</span></div>
+        <div class="fact sky"><b>45 litres</b><span>is about what a 5-minute shower uses. Every minute you cut saves roughly 9.</span></div>
+      </div>
+
+      <div class="why-split">
+        <div class="why-prose">
+          <h2>What is SDG 6?</h2>
+          <p>Sustainable Development Goal 6 is the United Nations promise of clean water and sanitation for everyone. It asks countries, businesses and families to use water wisely, keep it clean and share it fairly.</p>
+          <p>Water Guardians turns that promise into stories, games and tips anyone can use today.</p>
+        </div>
+        <div class="why-prose">
+          <h2>What can I do?</h2>
+          <p>You do not need to wait for anyone else. Turn off a tap, fix a drip, collect rainwater, plant a tree, or ask your school or workplace how it uses water. Small actions add up quickly when many people do them together.</p>
+          <div class="why-actions">
+            <button type="button" class="btn solid" data-enter="adults">See the tips</button>
+            <button type="button" class="btn ghost" data-enter="kids" data-goto="leak-patrol">Play Leak Patrol</button>
+            <a class="btn ghost" href="#home">Choose Kids or Adults</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App shell after path choice -->
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <button type="button" class="icon-btn" id="backPortal" aria-label="Change path">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <a href="#home" class="logo">
+        <!-- <span class="logo-mark" aria-hidden="true"></span> -->
+        <span>Water Guardians</span>
+      </a>
+      <nav class="top-nav" id="topNav" aria-label="Section"></nav>
+      <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <nav class="drawer" id="drawer" hidden>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <strong>Menu</strong>
+          <button type="button" class="icon-btn" id="menuClose" aria-label="Close menu">×</button>
+        </div>
+        <div id="drawerLinks"></div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- KIDS HOME -->
+      <section id="view-kids-home" class="view" hidden>
+        <div class="hero kids-hero">
+          <div class="wrap hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Kids zone</p>
+              <h1>Become a Water Guardian</h1>
+              <p class="lede">Choose a storybook, fix leaks in Leak Patrol, and watch short films about protecting water.</p>
+            </div>
+            <div class="hero-orb reveal" aria-hidden="true">
+              <div class="orb">
+                <span class="orb-ring"></span>
+                <svg viewBox="0 0 80 96"><path d="M40 4C56 28 72 44 72 64a32 32 0 1 1-64 0C8 44 24 28 40 4Z" fill="currentColor"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap feature-row">
+          <a href="#storybook" class="feature reveal">
+            <div class="feature-media story-media">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><path d="M8 10.5c0-1.4 1.1-2.5 2.5-2.5H22v32H10.5A2.5 2.5 0 0 1 8 37.5v-27Z" fill="currentColor" opacity=".35"/><path d="M40 10.5c0-1.4-1.1-2.5-2.5-2.5H26v32h11.5a2.5 2.5 0 0 0 2.5-2.5v-27Z" fill="currentColor"/><path d="M24 8v32" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M12 16h6M12 22h7M30 16h6M30 22h7" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg>
+              </span>
+            </div>
+            <div class="feature-copy">
+              <h2>Storybooks</h2>
+              <p>Three picture books with animated pages to turn.</p>
+            </div>
+          </a>
+          <a href="#games" class="feature reveal">
+            <div class="feature-media game-media">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="20" rx="10" fill="currentColor"/><path d="M16 22v8M12 26h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="31" cy="23.5" r="2.2" fill="#fff"/><circle cx="36" cy="28.5" r="2.2" fill="#fff"/><path d="M14 16c2-4 6-6 10-6s8 2 10 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".55"/></svg>
+              </span>
+            </div>
+            <div class="feature-copy">
+              <h2>Games</h2>
+              <p>Leak Patrol and My Water Day — play, then learn.</p>
+            </div>
+          </a>
+          <a href="#videos" class="feature reveal">
+            <div class="feature-media video-media">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="7" y="11" width="34" height="26" rx="6" fill="currentColor"/><path d="M21 18.5v11l10-5.5-10-5.5Z" fill="#fff"/><rect x="11" y="8" width="5" height="4" rx="1" fill="currentColor" opacity=".55"/><rect x="32" y="8" width="5" height="4" rx="1" fill="currentColor" opacity=".55"/></svg>
+              </span>
+            </div>
+            <div class="feature-copy">
+              <h2>Animated films</h2>
+              <p>Short videos that make water facts stick.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- STORYBOOK -->
+      <section id="view-storybook" class="view" hidden>
+        <div class="wrap page-intro">
+          <p class="crumb"><a href="#kids-home">Kids</a> / Storybook</p>
+          <h1 id="storyTitle">Storybooks</h1>
+          <p class="meta" id="storyMeta">Pick a picture book to read. Each one has animated pages you can turn.</p>
+        </div>
+
+        <div class="wrap story-picker" id="storyPicker" aria-label="Choose a story"></div>
+
+        <div class="wrap story-shell" id="storyReader" hidden>
+          <div class="story-reader-bar">
+            <button type="button" class="btn ghost" id="storyChange">← All stories</button>
+          </div>
+          <div class="stage" id="stage">
+            <div class="bubbles" aria-hidden="true">
+              <i style="--x:5%;--s:14px;--t:11s;--d:0s"></i><i style="--x:14%;--s:22px;--t:14s;--d:3s"></i><i style="--x:27%;--s:10px;--t:9s;--d:6s"></i>
+              <i style="--x:41%;--s:18px;--t:13s;--d:1s"></i><i style="--x:58%;--s:12px;--t:10s;--d:4s"></i><i style="--x:70%;--s:24px;--t:15s;--d:2s"></i>
+              <i style="--x:83%;--s:16px;--t:12s;--d:7s"></i><i style="--x:93%;--s:11px;--t:9s;--d:5s"></i>
+            </div>
+            <div class="book-wrap" id="bookWrap" data-pos="closed"><div class="book" id="book" role="group" aria-label="Storybook"></div></div>
+            <div class="book-m" id="bookM" aria-live="polite"></div>
+          </div>
+          <div class="b-ctrl">
+            <button class="btn ghost" id="bPrev" type="button">&larr; Back</button>
+            <div class="b-mid"><span class="b-pos" id="bPos"></span><div class="dots" id="bDots"></div></div>
+            <button class="btn solid" id="bNext" type="button">Open the book &rarr;</button>
+          </div>
+          <div class="card-surface story-home-tips">
+            <div class="eyebrow">At home</div>
+            <h2 class="story-tips-title">3 things you can do to save water</h2>
+            <ul class="home-tips">
+              <li><span class="tag">1</span><p><b>Shower for 4 minutes or less.</b> Set a timer or sing one short song, and when it is done, turn off the tap. A shorter shower saves up to 30 litres every single day.</p></li>
+              <li><span class="tag">2</span><p><b>Turn off the tap while brushing your teeth.</b> A running tap uses about 6 litres per minute. Wet your brush, turn it off, brush for 2 minutes, rinse quickly.</p></li>
+              <li><span class="tag">3</span><p><b>Collect rainwater for plants.</b> Put a bucket or barrel outside when it rains and use that water on the garden instead of the tap. Your plants will love it too.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAMES HUB -->
+      <section id="view-games" class="view" hidden>
+        <div class="wrap page-intro reveal">
+          <p class="crumb"><a href="#kids-home">Kids</a> / Games</p>
+          <h1>Play &amp; learn</h1>
+          <p class="meta">Two quick games that teach why every drop matters.</p>
+        </div>
+        <div class="wrap game-pick">
+          <a href="#leak-patrol" class="game-tile reveal">
+            <div class="game-tile-art leak-art" aria-hidden="true">
+              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <linearGradient id="glp" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0D4A58"/><stop offset="1" stop-color="#1A7A8E"/></linearGradient>
+                </defs>
+                <rect width="320" height="200" fill="url(#glp)"/>
+                <circle cx="260" cy="42" r="22" fill="#FFE08A" opacity=".9"/>
+                <path d="M0 150c40-14 80-8 120-16s80-18 120-6 50 8 80 2v70H0z" fill="#0A4652" opacity=".45"/>
+                <g stroke="#7DD3FF" stroke-width="10" stroke-linecap="round" opacity=".35">
+                  <path d="M40 110 H280"/><path d="M100 70 V150"/><path d="M160 70 V150"/><path d="M220 70 V150"/>
+                </g>
+                <g fill="#fff">
+                  <circle cx="100" cy="110" r="18"/><circle cx="160" cy="110" r="18"/><circle cx="220" cy="110" r="18"/>
+                </g>
+                <g fill="#0D6B78" opacity=".35">
+                  <circle cx="100" cy="110" r="6"/><circle cx="160" cy="110" r="6"/><circle cx="220" cy="110" r="6"/>
+                </g>
+                <g>
+                  <circle cx="160" cy="110" r="20" fill="none" stroke="#E0573F" stroke-width="4"/>
+                  <text x="160" y="116" text-anchor="middle" font-size="11" font-weight="800" fill="#E0573F">FIX</text>
+                  <circle class="drip" cx="160" cy="138" r="4" fill="#2BA8FF"/>
+                </g>
+                <circle cx="70" cy="168" r="12" fill="#F2C4A0"/>
+                <path d="M58 182c6-14 18-14 24 0" fill="#E4572E"/>
+              </svg>
+            </div>
+            <h2>Leak Patrol</h2>
+            <p>Spot shaking joints before the village tank runs dry.</p>
+          </a>
+          <a href="#my-water-day" class="game-tile reveal">
+            <div class="game-tile-art calc-art" aria-hidden="true">
+              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <linearGradient id="gwd" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#134E5E"/><stop offset="1" stop-color="#2A8A78"/></linearGradient>
+                </defs>
+                <rect width="320" height="200" fill="url(#gwd)"/>
+                <circle cx="56" cy="46" r="20" fill="#FFE08A" opacity=".85"/>
+                <ellipse cx="230" cy="40" rx="34" ry="12" fill="#fff" opacity=".25"/>
+                <ellipse cx="255" cy="34" rx="20" ry="10" fill="#fff" opacity=".25"/>
+                <path d="M150 28 C168 56 184 72 184 96 a34 34 0 1 1-68 0 C116 72 132 56 150 28Z" fill="#2BA8FF"/>
+                <path d="M132 90 q8 14 20 18" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+                <rect x="48" y="132" width="224" height="14" rx="7" fill="#0A3540" opacity=".45"/>
+                <rect x="48" y="132" width="132" height="14" rx="7" fill="#E8B84A"/>
+                <circle cx="180" cy="139" r="11" fill="#fff"/>
+                <g fill="#E8F7F4" opacity=".9">
+                  <rect x="58" y="158" width="40" height="8" rx="4"/>
+                  <rect x="108" y="158" width="28" height="8" rx="4"/>
+                  <rect x="146" y="158" width="52" height="8" rx="4"/>
+                </g>
+                <circle cx="250" cy="160" r="14" fill="#F2C4A0"/>
+                <path d="M236 176c8-16 20-16 28 0" fill="#2A9D8F"/>
+              </svg>
+            </div>
+            <h2>My Water Day</h2>
+            <p>Track a kid’s day — showers, hands, bottles — then find easy swaps.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- LEAK PATROL -->
+      <section id="view-leak-patrol" class="view" hidden>
+        <div class="wrap page-intro reveal">
+          <p class="crumb"><a href="#kids-home">Kids</a> / <a href="#games">Games</a> / Leak Patrol</p>
+          <h1>Leak Patrol</h1>
+          <p class="meta">Tap every leaking joint. Keep the tank above empty for 45 seconds.</p>
+        </div>
+        <div class="wrap">
+          <div class="lp card-surface reveal">
+            <div class="lp-hud">
+              <div class="hud"><span>Time</span><b id="lpTime">45</b></div>
+              <div class="hud wide">
+                <span>Tank</span>
+                <div class="lp-tank" id="lpTankBox"><i id="lpTank"></i><span id="lpPct">100%</span></div>
+              </div>
+              <div class="hud"><span>Fixed</span><b id="lpFix">0</b></div>
+              <div class="hud"><span>Lost L</span><b id="lpLost">0</b></div>
+            </div>
+            <div class="lp-field" id="lpField"></div>
+            <p class="lp-msg" id="lpMsg">Press start, then tap joints that shake and drip.</p>
+            <button type="button" class="btn solid" id="lpStart">Start patrol</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY WATER DAY -->
+      <section id="view-my-water-day" class="view" hidden>
+        <div class="wrap page-intro reveal">
+          <p class="crumb"><a href="#kids-home">Kids</a> / <a href="#games">Games</a> / My Water Day</p>
+          <h1>My Water Day</h1>
+          <p class="meta">Match your day as a kid Water Guardian. See where your water goes.</p>
+        </div>
+        <div class="wrap calc-grid">
+          <form class="card-surface reveal" id="calcForm">
+            <fieldset class="field">
+              <label>Shower length <output id="o-shower">0 minutes</output></label>
+              <input type="range" id="c-shower" min="0" max="15" value="0">
+            </fieldset>
+            <fieldset class="field">
+              <label>Hand washes <output id="o-hands">0 a day</output></label>
+              <input type="range" id="c-hands" min="0" max="15" value="0">
+            </fieldset>
+            <fieldset class="field">
+              <label>Water bottles filled <output id="o-bottle">0 a day</output></label>
+              <input type="range" id="c-bottle" min="0" max="6" value="0">
+            </fieldset>
+            <fieldset class="field">
+              <label>Watering plants / outdoor play <output id="o-play">0 min a day</output></label>
+              <input type="range" id="c-play" min="0" max="30" value="0">
+            </fieldset>
+            <fieldset class="field">
+              <label>Brushing teeth <output id="o-brush">0 times</output></label>
+              <input type="range" id="c-brush" min="0" max="3" value="0">
+            </fieldset>
+            <fieldset class="field" id="teethModeField" hidden>
+              <legend>While brushing</legend>
+              <div class="pills">
+                <label><input type="radio" name="teeth" value="off" checked><span>Tap off</span></label>
+                <label><input type="radio" name="teeth" value="run"><span>Tap running</span></label>
+              </div>
+            </fieldset>
+          </form>
+          <div class="card-surface reveal">
+            <p class="eyebrow">Your water use</p>
+            <p class="big"><span id="rTotal">0</span> <small>litres</small></p>
+            <div class="sbar" id="rBar"></div>
+            <ul class="leg" id="rLeg"></ul>
+            <p class="act-text" id="rBig">Move the sliders to build your day.</p>
+            <div id="swapBlock" hidden>
+              <h3 class="swap-title">Easy swaps</h3>
+              <ul class="swaps" id="rSwaps"></ul>
+              <p class="cnote" id="rYear"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEOS -->
+      <section id="view-videos" class="view" hidden>
+        <div class="wrap page-intro reveal">
+          <p class="crumb"><a href="#kids-home">Kids</a> / Films</p>
+          <h1>Animated films</h1>
+          <p class="meta">Short films about saving water. Tap play — they open right here.</p>
+        </div>
+        <div class="wrap video-grid" id="videoGrid"></div>
+      </section>
+
+      <!-- ADULTS HOME / TIPS -->
+      <section id="view-adults-home" class="view" hidden>
+        <div class="hero adults-hero">
+          <div class="wrap">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Adults</p>
+              <h1>Small habits. Real litres saved.</h1>
+              <p class="lede">Browse practical tips for home, outdoors and work. Open any tip, then pledge the ones you’ll try.</p>
+              <div class="totd reveal" id="totd">
+                <span class="totd-label">Tip of the moment</span>
+                <p id="totdTxt">Turn off the tap while brushing your teeth.</p>
+                <div class="totd-actions">
+                  <button type="button" class="btn solid" id="totdMore" data-tip="9">Read tip</button>
+                  <button type="button" class="btn ghost" id="totdNext">Another →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tips-bar">
+          <div class="wrap tips-tools">
+            <nav class="chip-nav" id="tipFilters" aria-label="Tip categories">
+              <button type="button" data-f="all" aria-pressed="true">All</button>
+              <button type="button" data-f="indoor">Indoor</button>
+              <button type="button" data-f="outdoor">Outdoor</button>
+              <button type="button" data-f="workplace">Workplace</button>
+              <button type="button" data-f="kids">Family</button>
+            </nav>
+            <div class="meter">
+              <div class="mtrack"><i id="meterBar"></i></div>
+              <span id="meterTxt">0 of 32 tips pledged</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap tips-body">
+          <div class="tgrid" id="tipsOut"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap foot-inner">
+        <div>
+          <strong>Water Guardians</strong>
+          <p>Public education for SDG 6 — Clean Water and Sanitation. Part of the STREAM project at NEDUET CSIT.</p>
+        </div>
+        <p class="foot-end">Every drop counts</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tip modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="m-scrim" data-close></div>
+    <div class="m-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button type="button" class="m-x" id="mClose" aria-label="Close">×</button>
+      <p class="m-cat" id="mCat"></p>
+      <p class="m-num" id="mNum"></p>
+      <h2 id="mTitle"></h2>
+      <p id="mMore"></p>
+      <div class="btn-row">
+        <button type="button" class="btn solid" id="mPledge" aria-pressed="false">I’ll do this</button>
+        <button type="button" class="btn ghost" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storybook.js?v=5"></script>
+  <script src="js/app.js?v=8"></script>
+</body>
+</html>
